@@ -105,3 +105,21 @@ body{
     border-color: crimson;
     color: #333;
 }
+
+@media (max-width: 450px) {
+    .container .heading{
+        font-size: 25px;
+    }
+    .container .box-container{
+        grid-template-columns: 1 fr;
+    }
+    .container .box-container .box .image {
+        height: 200px;
+    }
+    .container .box-container .box .content p {
+        font-size: 12px;
+    }
+    .container .box-container .box .content .icons span {
+        font-size: 12px;
+    }
+}
