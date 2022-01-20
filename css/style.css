@@ -6,6 +6,7 @@
     border: none;
     text-transform: capitalize;
     transition: all .2s linear;
+    text-decoration: none;
 }
 body{
     background-color: rgb(1, 252, 135);
@@ -19,5 +20,88 @@ body{
 .container .heading{
     font-size: 40px;
     margin-bottom: 20px;
+    color: #333;
+}
+.container .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+}
+.container .box-container .box{
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    display: none;
+}
+.container .box-container .box:nth-child(1),
+.container .box-container .box:nth-child(2),
+.container .box-container .box:nth-child(3) {
+    display: inline-block;
+}
+.container .box-container .box .image{
+    margin-bottom: 20px;
+    overflow: hidden;
+    height: 250px;
+}
+.container .box-container .box .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.container .box-container .box:hover .image img{
+    transform: scale(1.1);
+}
+.container .box-container .box .content h3{
+    font-size: 20px;
+    color: #333;
+}
+.container .box-container .box .content p{
+    font-size: 15px;
+    color: #777;
+    line-height: 2;
+    padding: 15px 0;
+}
+.container .box-container .box .content .btn{
+    display: inline-block;
+    padding: 10px 30px;
+    border: 1px solid #333;
+    color: #334;
+    font-size: 16px;
+}
+.container .box-container .box .content .btn:hover{
+    background-color: orchid;
+    border-color: crimson;
+    color: #fff;
+}
+.container .box-container .box .content .icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #333;
+}
+.container .box-container .box .content .icons span{
+    font-size: 14px;
+    color: #777;
+}
+.container .box-container .box .content .icons span i{
+    color: crimson;
+    padding-right: 8px;
+}
+#load-more{
+    margin-top: 20px;
+    display: inline-block;
+    padding: 15px 30px;
+    border: 1px solid #333;
+    color: #334;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #fff;
+}
+#load-more:hover{
+    background-color: orchid;
+    border-color: crimson;
     color: #333;
 }
